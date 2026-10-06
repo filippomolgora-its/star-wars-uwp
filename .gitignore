@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+.dotnet-home/
+*.user
+*.suo
+*.db
+*.sqlite
+*.sqlite3
+*.tmp

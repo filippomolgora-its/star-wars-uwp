@@ -1,0 +1,19 @@
+<Page x:Class="StarWarsApp.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Padding="24">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+        <StackPanel><TextBlock Text="STAR WARS FILMS" FontSize="28" FontWeight="Bold"/><TextBlock x:Name="StatusText" Margin="0,4,0,16" Text="Loading films…"/></StackPanel>
+        <Grid Grid.Row="1" ColumnSpacing="24">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="300"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+            <ListView x:Name="FilmsList" SelectionChanged="FilmsList_SelectionChanged"/>
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Spacing="10">
+                    <TextBlock x:Name="TitleText" FontSize="26" FontWeight="Bold" TextWrapping="Wrap"/>
+                    <TextBlock x:Name="EpisodeText"/><TextBlock x:Name="DirectorText"/><TextBlock x:Name="ProducerText"/><TextBlock x:Name="ReleaseText"/>
+                    <TextBlock Text="Opening Crawl" FontSize="18" FontWeight="SemiBold" Margin="0,8,0,0"/>
+                    <TextBlock x:Name="CrawlText" TextWrapping="Wrap"/>
+                    <Button x:Name="AnalyzeButton" Content="ANALIZZA" Click="AnalyzeButton_Click" HorizontalAlignment="Left" Margin="0,12,0,0" IsEnabled="False"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
